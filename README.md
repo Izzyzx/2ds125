@@ -1,41 +1,46 @@
-import {View, Text, Image, Button, StylesSheet } from 'react-native';
-export default function App () {
+import React from "react";
+import { View, Text, Image, Button, StyleSheet } from "react-native";
 
-message = "Olá mundo:"
-nome = "Izzy Nascimento"
+export default function App() {
+  const message = "Bem vindos(as):";
+  const nome = "Izzy e Carol";
 
-return (
-  <View style={teste.container}>
-    {/*provavelmente o título da tela*/}
-    <Text style={testetexto.title}>{message} {nome}</text>
+  return (
+    <View style={styles.container}>
+      {/* Título da tela */}
+      <Text style={styles.title}>
+        {message} {nome}
+      </Text>
 
-    <Image
-    source={{ uri: 
-    />
+      {/* Imagem */}
+      <Image
+        source={{
+          uri: "https://www.ufrgs.br/faunadigitalrs/wp-content/uploads/2022/03/Sapo-B-arenarum-Itapeva-1024x768.jpg",
+        }}
+        style={styles.image}
+      />
 
-    <button title='Clique aqui mano'/>
+      <Button title="Clique aqui mano" />
     </View>
-);
+  );
 }
 
-{/*aqui provavelmente é o visual*/}
-
-const ccc = <stylesSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignitems: 'center',
-    backgroundColor: '#f5f5f5',
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#f5f5f5",
   },
   title: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 20,
-    textalign:'center',
+    textAlign: "center",
   },
   image: {
-    width: 100,
-    height: 100,
+    width: 200,
+    height: 200,
     marginBottom: 20,
   },
 });
